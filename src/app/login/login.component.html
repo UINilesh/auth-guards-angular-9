@@ -1,0 +1,22 @@
+<form [formGroup]="form" name="form" (ngSubmit)="login()">
+    <div>
+        <input  type="text" placeholder="Email" formControlName="email" />
+        <div *ngIf="submitted && ferror.email.errors" class="invalid-msg">
+            <div *ngIf="ferror.email.errors.required">
+                Please enter email 
+            </div>
+            <div *ngIf="ferror.email.errors.email">
+                Please enter valid email
+            </div>
+        </div>
+        </div>
+        <div>
+        <input  type="password" placeholder="Password" formControlName="password" />
+        <div *ngIf="submitted && ferror.password.errors" class="invalid-msg">
+            <div *ngIf="ferror.password.errors.required">
+                Please enter password
+            </div>
+        </div>
+        </div>
+        <button type="submit" color="primary">Login</button>
+    </form>

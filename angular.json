@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "aunthentication"
+    }
+  },
+  "defaultProject": "aunthentication",
+  "cli": {
+    "analytics": false
+  }
 }
